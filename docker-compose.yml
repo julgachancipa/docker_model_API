@@ -1,0 +1,22 @@
+version: "3"
+services:
+    model-api:
+        image: gcr.io/model-api-294400/model-api:0.0
+        ports: 
+            - 5000:5000
+        depends_on:
+            - postgresdb
+    postgresdb:
+        image: postgres
+        ports: 
+            - 5432:5432
+        environment: 
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=password
+    pgadmin:
+        image: dpage/pgadmin4
+        ports: 
+            - 8080:80
+        environment: 
+            - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+            - PGADMIN_DEFAULT_PASSWORD=password
