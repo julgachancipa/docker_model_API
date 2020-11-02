@@ -9,7 +9,7 @@ app = Flask(__name__)
 # ENV = os.environ['ENVIROMENT']
 # ENV = 'dev'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://admin:password@localhost:5432'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://admin:password@postgresdb'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
