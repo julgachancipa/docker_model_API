@@ -7,7 +7,7 @@ from modeler.Modeler import Modeler
 app = Flask(__name__)
 
 # ENV = os.environ['ENVIROMENT']
-ENV = 'dev'
+# ENV = 'dev'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://admin:password@localhost:5432'
 
@@ -106,8 +106,8 @@ def predict():
 
 
 if __name__ == '__main__':
-    db.create_all()
-    if ENV == 'dev':
-        app.run(debug=True, host='0.0.0.0') 
-    else:
+    # db.create_all()
+    # if ENV == 'dev':
+    #    app.run(debug=True, host='0.0.0.0')
+    # else:
         app.run()
